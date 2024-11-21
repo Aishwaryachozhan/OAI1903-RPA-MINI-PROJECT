@@ -1,0 +1,974 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1009.6,3699.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="667.2,3634.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="sign" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="625.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="sign" Title="Enter your zodiac sign">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[sign]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[sign]" sap:VirtualizedContainerService.HintSize="625.6,3260" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+      <Switch.Default>
+        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Invalid Zodiac Sign" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_26" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+          <ui:SendMail.Files>
+            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+          </ui:SendMail.Files>
+        </ui:SendMail>
+      </Switch.Default>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="aries" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="585.6,2817.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_14" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,2715.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="language" />
+                <Variable x:TypeArguments="x:String" Name="lan" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="510.4,107.2" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="ae79ab5c78bd45ddeda5ca46dfd8f345" Selector="&lt;webctrl parentid='main' tag='IMG' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="510.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="c262c1026daed5349c98b1f29550eb3c" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result1]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="510.4,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="language" Title="Enter your prefer language">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="x:String">[lan]</OutArgument>
+                </ui:InputDialog.Result>
+              </ui:InputDialog>
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Translate" sap:VirtualizedContainerService.HintSize="510.4,2046.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b4c13e08-9d6a-4cf2-992d-daac1c23c615" Version="V1" WindowResize="Maximize">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,1829.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="text1" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Translate'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="435.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="b4c13e08-9d6a-4cf2-992d-daac1c23c615" Text="[result1+ &quot;[k(enter)]&quot;]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://translate.google.com/?sl=auto&amp;tl=ta&amp;op=translate" DesignTimeRectangle="158, 342, 795, 207" FriendlyName="'Source textclearClear'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;c-wiz' parentid='yDmH0d' tag='C-WIZ' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='yDmH0d' tag='C-WIZ' aaname='' check:text='Source textclearClear source textShow moreShow lessVoice input isn&amp;apos;t supported on this browserBusy.' /&gt;" Guid="4dc6b2f9-6578-443e-98b0-465d3d89b00c" ImageBase64="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" InformativeScreenshot="b65c5d9ac8abd6963f062cd0df61ac13.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Translate' /&gt;" SearchSteps="Selector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="89, 145, 205, 30" ElementType="Text" FriendlyName="'Translate'" FullSelectorArgument="&lt;webctrl id='sdgBod' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sdgBod' tag='A' type='' aaname='Translate' check:text='Translate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANEAAAAiCAYAAADBPDxYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAA3FSURBVHhe7ZxtUFzVGcf7Rfux05n2Q7902pm+fe1MO/ZlOrZG41vUTDRq7UtiA05AF0pE4lZCYyiKiSSKBNwIaEMMakBd0oAaIlAxCYRAgAQSCAkhIIaFZGHfX+4+Pc/dc849d/fu7t1ljQ3c/8zzgXPPuW+c33me85xz9xtgyJChRcmAyJChRcqAyJChRUoXRDPzIag/6oe/13ngkddcsLLUCWteccHGGje89rEPzn4h0ZpLV1dcs5D33xe5uQIeesTQcldciCZmJSj+wAsrSpxwWwLLI4Cdv7J0YUKIfvHOg9wMiAwxaUIUCgG8/bkf7nhRG5hYdvsLTjjQ5adnWVq6PhBNQ5N5I6zbkKxVQA89w42vbqhiz1XeTcv+vxUFEeEHiho8UYDk7fNA86kAXJyRwB8E+OJaCDrPBWVPdddLSr2HSJg368CzLC0ZEF0vLQGI3uzwqeB5rMIF/ZcINXHk8oWgtMkLf6l0w7R96QGE+lrDua4KDkxVFy1bsvoKIJq0gpme09w4TQvTJxVEo19KKoCefNMNC259UGCteZ11b0QZEF0v3eAQPbNfCePWve4GN/EwhsIyILpeuoEhukDmOqIXajsToEe+WklzNvAPDULI6aAlSSrogtB8D4Q847QgOaGnxRS9L8HjJgtRaGEBAsOnIeRy0ZJFyIBocbpeENW0K3Oh1TtJx6TlX4WCU5dh/vlnwXb/H2BmxS+5zT5yDzhefQlCjgVaM4YkD0jniyD4+U8g0HqTYm3fgmDfvaQD99KK2sI53Ksf+WDtqy7+zCtecILp327oGw/Ctve9vPyj/jBdeiBCYBzl22H24XtUz3V1w6PgbthPKqS4BKADop5y2vHMVpgif/unO2FvcQFkZIbLM8raIYyzH2a6rFBTXAg52bQNWnYeFO2oh46xebmWSkInlK8vzcPQwQooyjXR9ibI2lwCezumydk1ROqPt9ZDWVEev591mSbIwTatY2BXvZY4EPmnoafRAsWbhfMQy8jdCmX722HcTutRTTUW8jqaRt+VSvZBaKkqAbOJPRs5v6kQiqus0DOtnXnmEImh3L8+9NLS9Mvd8DbM3PlrVSeLtNmH7gR/7wnaQi30OlHwRNnNBLItWDvcSNDItAR/rFDg0bIHypTjeiEKnBuC2Ufv1XweZvNF+aRDpQBSkhCNdlkgR+hkaGUdbgDHIOw1K50jluVXD1LgqESIOieg6bnoNsyySMdXtZUmoKUowTVzt0PrBK0fAyLXqTowbxTaaFlmAew9RZ6TKlmIplq2R703teVBaQu/US4O0RPVbt5xqlp9tFRbx0aD8uKqHvMK8Lrf26fqVLNrVsJ8SSE495TD/D+fIXD9RjlOQPMP9tGWYYUcp4m3+bYKlmDf/SCNbAbpzAYIdP5IOHYTKS+gLcNyekPwcLna+xS+5wHLER+UWL2wZlc0XHogQs9qW32b6tns5lxwVu+WPZM4aDgqXqatklAyEG0qBDPxMBlF9TB0hb58yQ9+ZNdvIx6hDoo35YG5qh1Gp93cc/gnumGv0NmLW2z0CJEAUZYpT+6sVR0T4XMSRbYta1M68lA1qU/L83d3whQbn73EO3XVQynxZlmbiCc50Evh04bIbxuDjtoSyCdeoab1LMw4lGeb6qqDIgZYZgm0CrcuS0c45yLvOIvWySm1Ku+OvCHXxW5oKFGeQ3w+FIfob3sUiKrb4kN0qC+g6mjxDNeTUNLMlypIruU9AdK1q/IxpsDF8zD32P28ztzja1UhUPDErQok7d+F0NwReoQq6IDgwFoVSKGFU/QgQOVhJWRd9bILBibUqXtc38p8Q3kPaHogkgcAes+za++GwMgwPRJW4Nww2O77Pa+DfyelZCBCe46MsCk4PPQa3Mtk18AQLRY7IY7GVV3qTiRLGoQaFh4WH4ZwZDUG9ZtoWQkLJxMpxTnRhBWKqBfJIp5UpUQQuTqhjLWN9KRcbuh5hQ4U+G6E96sZzu34T/xwLhmIJufCV8NRmXc0EvbEmvcELozCzMpf8bosrEMYVHDMNsvlUZJ8EDz+c15PGs6Wi9EL3Vmq3Fdjt+AiBWGCRdzmlAgiyX6N36t4v0z+/l6Y32ZWPdO1pzfSozqVFEQkpEmSUZX4tQqhaZKWiRBtbaaARKt/N62TaYF+uUSAyNygE+zUEwuR80KuBBDZD5aE220oAdEBR2mkHnLoeaqEfzOHaGezMpnG0C6ecMQ+RSbgWnZ0JMjPg8bWma4+uZ53ImdtlVwWS/ZnnlTq1lTKZdKlnRyM4Oc/lctiSZqqFer+TC5rH1LAxw20gTjrx/nCgJIIIu9nbfxebatXyGUhjxvcTQ1yQoEdYzb3pwfAfeBtuZ5uJQVR4t0L9rF22KuRWDAXW6Clhcw9Iq8ldsID0XMCJmUOotyDGM5lmC3QMTwNLu3xiyoORHKCgoSjUYkFnPg3Q2tt9PVlxYXIDR07lHPpNfE8HKLj59Wdf/JqKvEA+WdeUM7zwE7FMYqTbs8nh2ipthyVO3nd+W3PymXS6LMKGGQeFE+h+W5eF+dNEArA+yf8/L42kNA1nl4nc0JWNxFEbusBfq9z6x8Cx2s7wLbqVl4m2+23yCGf78Qxci8p5D3TBhEJSXYrnTqRaUIUY06B0oIIQ8TW0uhryhm1Wiv0TEQSFQMiBynPVZ8jtiUDUWpbrcTBhEOEIzN+3sA6j/kdJeZPRjhBZ+fASTvT3J9X807labbSUm2JENm35Mtl0vlCBaLeu+WyWArZjwsQ3SRDdLBX8UTrX48PESYaWN2EEDU18nuNNEx1O9+ygDQ7I9dNWWmCyN7CwhZipu3Q0DWheAW/G2aG26FGyN6lBSIq9H4NO7aqvR+1nNLDQqinBZENWouV+lkl9dBzUUiKOKZhtNUiZO9ShEgr5a1DHCLUB8JojYajdzKKnE98KizY4jyAdS5cC4qna7mZSl0CFEqa3KOA0fE9UhJ7RJcu71bqfvZ9ueyE4CExK+dVbi1Km+v1h3O+7qP8XpnZ87PB234YIBh/z6FupQWiaWhhSQOtDBbTQA3PUqUTIlFyp++0QrkALE7ow71NA6JpKxSxMp60iNZQNTtfMhAJ4VwmaZdCAKaCCL3R4xYlO4VAfNijDyQM/3ADKmuL24bEyMVVV807me2e38k7FbTkP92v6pC+451yecg1ooBBTJq0yOVRktwQ6Pwhrxc8vV4uxp3nq3Yonvbd49rPFblzIxFEIZ9PlXlz7auRy7Xk7WwnDVL4L6UFojFoyKd14oy443UF0ddKM0RcEgF7K70n3kYDorF6yKdlMa8vjUE9e76kIBITCybyzPGjFC2pIEJhNg3Tv2JHwon24GXtURWzXvuP+uFu4XOIe0lnHbepOwuGNLa7fss729XsdRA4P0KPhoWTdHHuNPfXNYRsxWUET65UQGr/jpxAED0Sbv0J9t2n1CEWWjhJjwLUCrsyEKhPBtXuCBdiN6SQ4nbWVvJ7tt13KwTOnqFHqMho4nilNPzcTzwG/jMD9IBOpQWieSUkikjRMvnHGniaWHWtVCGS13DQ4xTE7JxDlkjvoQHR1cNQTMuyLBHpa1l+GD+wlZ5HPBeVqx3K6LGcujFaKMhFrsnCTBNpG2MHGq4l5W/aJYfBbI0MFQUR6jQBBr8LEjsTGq70P/++F9741AfbD3rlz8XxQzyxDq72R66/MOHWF9bZmGHWDifjCIzq2B23gH8gYrHVeTZisZXYZz8A6ayJAHYHBI58U3VMOvc0bRmWhzifyN0K+Ll7+cc+ece6WM5MD0Qht0u1voWJBBwkHJW75O1NuKgsPtvXlZ1zte3i51EtxnptMNRIV+s3pnFOhMkAU7jdusw8KG0chBm+2GqD0UMVyg6Bss7Y4Zwqg2aCov3KefxXBqGJJi4yYs2JRC9s2gUduH2HAO4SVnLExdbI+aLfMQHHarcKx9WgaUKEWvCEVEkCPfaPdz1gW4iffZJBSrTt58GV4OtlL1Ct8LafH6tgibabiXd/HmuHGwnCT9jjbftZ+aJTFZbqgQiF61ti8kTTyMCAqe+klSaIsDMOVSvhWpRh5xhWgFk0RKiJw1CaKKuWTzwj75RaEBHhliUerkUbzqlG44STKkiYcXDDmmkToI5hGeY66I+YlMWEiAnDMvQ6GKKJnY0ZfkKO8ODGTb0KXr4E9i1Pq+YSaLOPrpK9kr4NqFuiYSJeKti3irQPL/XFEtuAKnpb9KhPveWWvSh6W1Z+5LQ+iFA4P8JFZVwLEp8LzV7wFAQvXaQ1k1TaIArLPtAM5eJm0OwCKK7thBnsUQIwaYEIla4NqFEbX0mnzlc2viaak9kHrFCWL7TNtUBP5L4C+xh07N+lugZbQ2vq0t5gmxAiJpyYn7wQlD8Rx99faDoZkNeW0GMtRjhXkj+FSPWTgaCTeKcTJFa7RAuSE/sUAp+PCWFiELHBASHq/nKAmxZEonDBFedGuJUp5c88DN0Q0g3RUtEFEs7hz3wFNSbWKPyuSPS6c87FDRKGlr6WFUS4+Mvg2POp9ibbd44pa2XrLcmnOw0tPy0riPAHKBkgaPjjk7ggjJ/B468Y4e51MduIuxwMGUqkZQURhnB6M46YLEllm5uh5adlNydCLvZ1xv9hyspWHwRizJkMGYrUsoOICcM33K297QMvbNrnkX+c8uVDXjgzadBjKDktW4gMGUqXDIgMGVqUAP4HckiZ9KHLSRAAAAAASUVORK5CYII=" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,328.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,250.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'C-WIZ'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff945924-75c3-462a-98d8-68d841d7930b" InformativeScreenshot="64a8194f41709986b0e45654fda3282d" Selector="&lt;webctrl css-selector='body&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;c-wiz' parentid='yDmH0d' tag='C-WIZ' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4c13e08-9d6a-4cf2-992d-daac1c23c615" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://translate.google.com/?sl=auto&amp;tl=lt&amp;text=dog%0A&amp;op=translate" DesignTimeRectangle="1266, 287, 50, 50" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;button&amp;gt;div' idx='6' isleaf='1' parentid='yDmH0d' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' isleaf='1' parentid='yDmH0d' tag='DIV' /&gt;" Guid="b3f03d02-ac50-4ab3-a0d7-dc3d1499a7e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE7SURBVGhD7dTtSgJRFIXh7rQfEpYVdQmBkDFh0S1E0K8ICbyVktS+7mHyzAzsWnaUEgmhs4eWrBdEPO4D+1GYDVvTBGNLMLYEY0swtgRjSzC2BGNLMLYEY0swtgRjS7BVyvPcOtmZvby+xZPVwjzuvU8m8eTvJYVdXl3bZmPbmruHNhyN4+nvYQ7zuIf7qUoKwy9+1O584VoHNn56jt8s73E4ms5hHvf+7T+GFnFYflk439rZn861j7OkKOTy8MCSWBZLY/lF3P3D4AcqhCJ+ky4XGMKy33HAILw3mnuuKOQGQyGEz6ddd47r3fXnqJPTczcUcoUhLI9HOTCzFz6XZRknfHKHISBmuKx74Y5CtcBQURR2c9uzqqriiW+1wepOMLYEY0swtgRjSzC2BGNLMLYEY0swttYUZvYBQKMSfWJfa+8AAAAASUVORK5CYII=" InformativeScreenshot="c75dd1a4f1c7e5effaba10ae5afbb4c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Translate' /&gt;" SearchSteps="Selector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="89, 145, 93, 30" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='sdgBod' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='sdgBod' tag='SPAN' type='' aaname='' /&gt;" ImageBase64="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" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Translation typesTextIm…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="435.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="b4c13e08-9d6a-4cf2-992d-daac1c23c615" Text="[lan]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://translate.google.com/?sl=auto&amp;tl=lt&amp;text=dog%0A&amp;op=translate" DesignTimeRectangle="220, 344, 1538, 68" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='' tag='INPUT' type='text' /&gt;" Guid="90891c7a-0def-4224-b6cc-a9aa9c806305" ImageBase64="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" InformativeScreenshot="78710feecac51b8667627965cb316e9f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Translate' /&gt;" SearchSteps="Selector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="158, 197, 1600, 85" FriendlyName="'Translation typesTextIm…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div' parentid='yDmH0d' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='yDmH0d' tag='DIV' aaname='' check:text='Translation typesTextImagesDocumentsWebsites' /&gt;" ImageBase64="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" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,328.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,250.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'C-WIZ'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff945924-75c3-462a-98d8-68d841d7930b" InformativeScreenshot="64a8194f41709986b0e45654fda3282d" Selector="&lt;webctrl css-selector='body&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;c-wiz&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;c-wiz' parentid='yDmH0d' tag='C-WIZ' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <uix:NGetText DisplayName="Get Text 'Translate'" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b4c13e08-9d6a-4cf2-992d-daac1c23c615" Version="V1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://translate.google.com/?sl=auto&amp;tl=ta&amp;text=dog%0A&amp;op=translate" DesignTimeRectangle="984, 362, 61, 36" ElementType="Text" FriendlyName="'நாய்'" FullSelectorArgument="&lt;webctrl aaname='நாய்' parentid='yDmH0d' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='yDmH0d' tag='SPAN' type='' /&gt;" Guid="27ee0e26-2ed0-4276-8974-1dd1e69c440d" ImageBase64="" InformativeScreenshot="824e1e224244f4f782901b71bd89e5b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Translate' /&gt;" SearchSteps="Selector">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="19, 127, 1699, 60" FriendlyName="'Translate'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div' idx='2' parentid='gb' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='gb' tag='DIV' check:text='Translate' /&gt;" ImageBase64="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" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="x:String">[text1]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="435.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[text1]" />
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI/SURBVDhPhZLLaxNRFIdn5cL/yZXQR5o22lYs2E2hRdyIC8GFoLEE8mxSfCRtzMK2NCDUmGJJ22xi0QYSGyoTk8zkMXknUAWnTmbl4ue5M5lQtLUHftxhuN93z5w73G2vHJpeVjDlU3CTxavgBsWypGDG1bjGXVYMnF5WMUWZZPGpJFJJosJiP1nrb7u4JklwLkyZcH//bbXmrvS3nl+sbQP+W2BZUvF8qyqIYulDtVrdbjab0Xq9GZWkerRWq73P58szHPtmBt4NqUiLMqSWjMOcrL2bIMH90An4bAGtVhvdbhedTkdLu90GCcGxgbETvxD8bIuGR8+zfh0e97Auevh4yEMQSxr0j2CCps2geventr7YVSDUZXyTZE1gpqxEy+D5HOafujTQSKPRIIGHXZneweI7RTvZFlGQ4E812OxWccdThGNlA55QGM7QJh75gngZjuiCcRIwaP61ipQgo9aVSXaKudWeBo9R2CGBzRg+pzJYj+wglvhEM2npArNbGbQ6CEEGbHL1MErxhXk89gZh879BqVQC3YouGHMpA+AseBYedfZwL9DAQ4cftsAaBEFApVKBJEngTCQwAAMagH14hGJyyogn0tiOJ2APrqNYLKFcLoMbWvzxasTxC0aG+xmy6yuDhx16NvbLKBQEHCRTEEVRF/yvrNajq9dvxcBimdtH4uArtS9qMJvDpQJWCw/iNfPsHnZ2j5DN5rQODAFLf9vF9cSxt/A2kkQmc0w/Uxb5fJ4kBW2QyfTx6h8fcX0dWzi39AAAAABJRU5ErkJggg==" InformativeScreenshot="ef482a9d7a2d3b0f244e8eb7a57c5613.png" Selector="&lt;html app='chrome.exe' title='Google Translate'/&gt;" Url="https://translate.google.com/?sl=auto&amp;tl=ta&amp;op=translate" />
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="taurus" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_15" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result2" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="07eb4c91e2241d16ab22aa268569117b" Selector="&lt;webctrl aaname='Taurus Apr 21 - May 20' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_17">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="7225bd00e9dbb93d5c9fb8858b7c770f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result2]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result2]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_15" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="gemini" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_16" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result3" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="1bc1a9a52439cfc6df955e0a8087e5f4" Selector="&lt;webctrl aaname='Gemini May 21 - Jun 20' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_18">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="dd93d26039a85f9b735e3a99963a70a6" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result3]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result3]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_16" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="cancer" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_17" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result4" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="35590b599bc8c73cf867cb5696aacdb5" Selector="&lt;webctrl aaname='Cancer Jun 21 - Jul 22' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_19">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="e0dc6da19bacbe8decc3a33b97733331" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result4]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result4]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_17" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="leo" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_18" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result5" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="381c7ed94814236b19779c304f52a290" Selector="&lt;webctrl aaname='Leo Jul 23 - Aug 22' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_20">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="7cdc57d14a0d8ddc151732124aa0039e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result5]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result5]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_18" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="virgo" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_19" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result6" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="8856b9a00b3e00a9086755d90b6fdaeb" Selector="&lt;webctrl aaname='Virgo Aug 23 - Sep 21' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_21">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="3596aec0c629d2f29ed358e08b351d7e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result6]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result6]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_19" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="libra" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_20" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result7" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="85406e5d011238407e6faf9bec48b91a" Selector="&lt;webctrl aaname='Libra Sep 22 - Oct 20' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_22">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="6cf8ee85126f196b312e158ac0589dc0" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result7]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result7]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_20" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="scorpio" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_21" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result8" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="0467f8e4f6e3f3b7b1310468ca4b5d08" Selector="&lt;webctrl aaname='Scorpio Oct 21 - Nov 20' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_23">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="6d08db0e38d4bb291380a6e3c82f9d70" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result8]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result8]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_21" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="sagittarius" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_22" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result8" />
+                <Variable x:TypeArguments="x:String" Name="result9" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="2765eb176f03390fb6d9b1ce71794c92" Selector="&lt;webctrl aaname='Sagittarius Nov 21 - Dec 21' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_24">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="cbf6af29c67f3d10a1137b90fa5ac255" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result9]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result9]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_22" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="capricorn" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_23" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result8" />
+                <Variable x:TypeArguments="x:String" Name="result9" />
+                <Variable x:TypeArguments="x:String" Name="result10" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="4701286e6ea9158b99a26c21b148666d" Selector="&lt;webctrl aaname='Capricorn Dec 22 - Jan 21' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_25">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="c3cff8409ee9372629a1fb1a575f84d5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result10]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result10]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_23" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="Aquarius" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_24" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result8" />
+                <Variable x:TypeArguments="x:String" Name="result9" />
+                <Variable x:TypeArguments="x:String" Name="result10" />
+                <Variable x:TypeArguments="x:String" Name="result11" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="9f423d1842d088c7b632598856853fe2" Selector="&lt;webctrl aaname='Aquarius Jan 22 - Feb 18' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_26">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="3500c4a929417329b0835052a52e271e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result11]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result11]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_24" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" x:Key="pisces" BrowserType="Chrome" sap:VirtualizedContainerService.HintSize="508.8,636" sap2010:WorkflowViewState.IdRef="OpenBrowser_25" Url="https://www.astrologyanswers.com/horoscopes/#google_vignette">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,533.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="result1" />
+                <Variable x:TypeArguments="x:String" Name="result8" />
+                <Variable x:TypeArguments="x:String" Name="result9" />
+                <Variable x:TypeArguments="x:String" Name="result10" />
+                <Variable x:TypeArguments="x:String" Name="result11" />
+                <Variable x:TypeArguments="x:String" Name="result12" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb36c893-1c20-4e05-aa51-7b42939f14d4" InformativeScreenshot="269efc26a1583458ded43ac026850402" Selector="&lt;webctrl aaname='Pisces Feb 19 - Mar 20' parentid='main' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_27">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce9bf006-b382-4b39-a806-49d7ab8241e2" InformativeScreenshot="6057bb9194cf5b1c347c3d29d000b4a5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' tag='P' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[result12]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[result12]" DisplayName="Send SMTP Mail Message" Email="220701017@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_25" IsBodyHtml="False" Password="Aishwarya@2004" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Extracted Text" To="chozhanaishwarya@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+    </Switch>
+  </Sequence>
+</Activity>
